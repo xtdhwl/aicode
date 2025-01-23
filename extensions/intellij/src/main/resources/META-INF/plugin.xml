@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idea-plugin>
+    <id>com.aicode.intellij</id>
+    <name>AICode Assistant</name>
+    <vendor email="support@aicode.com" url="http://www.aicode.com">AICode</vendor>
+
+    <description><![CDATA[
+    AICode Assistant plugin for IntelliJ IDEA.
+    Features:
+    <ul>
+        <li>AI-powered code completion</li>
+        <li>Code generation</li>
+        <li>Smart code suggestions</li>
+    </ul>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="AiCode.ShowDialog" 
+                class="com.aicode.intellij.actions.AiCodeAction" 
+                text="AICode Assistant" 
+                description="Open AICode Assistant">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt A"/>
+        </action>
+    </actions>
+</idea-plugin>
