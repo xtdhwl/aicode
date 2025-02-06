@@ -1,6 +1,7 @@
 plugins {
     id("java")
     id("org.jetbrains.intellij") version "1.17.4"
+    kotlin("jvm")
 }
 
 group = "com.shenru.aicode"
@@ -21,13 +22,11 @@ intellij {
 
 tasks {
     withType<JavaCompile> {
-        sourceCompatibility = "17"
-        targetCompatibility = "17"
     }
 
     patchPluginXml {
         sinceBuild.set("233")
-        untilBuild.set("241.*")
+        untilBuild.set("243.*")
     }
 
     signPlugin {
@@ -39,4 +38,10 @@ tasks {
     publishPlugin {
         token.set(System.getenv("PUBLISH_TOKEN"))
     }
+}
+dependencies {
+    implementation(kotlin("stdlib-jdk8"))
+}
+kotlin {
+    jvmToolchain(17)
 }

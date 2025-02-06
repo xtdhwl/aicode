@@ -18,6 +18,8 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
+        <editorFactoryListener
+                implementation="com.aicode.intellij.extensions.AutocompleteEditorListener"/>
     </extensions>
 
     <actions>
