@@ -20,6 +20,8 @@
         <!-- Add your extensions here -->
         <editorFactoryListener
                 implementation="com.aicode.intellij.extensions.AutocompleteEditorListener"/>
+
+        <typedHandler implementation="com.aicode.intellij.extensions.demo.MyTypedHandler"/>
     </extensions>
 
     <actions>
